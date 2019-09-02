@@ -61,3 +61,13 @@ buttonText.textContent = siteContent["cta"]["button"];
 // Call to action image
 let ctaImage = document.querySelector('.cta img');
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Updating the Main Content
+let topContentHeadings = document.querySelectorAll('.text-content h4');
+let topContentParagraphs = document.querySelectorAll('.text-content p');
+
+topContentHeadings[0].textContent  = siteContent["main-content"]["features-h4"] ;
+topContentParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+
+topContentHeadings[1].textContent  = siteContent["main-content"]["about-h4"] ;
+topContentParagraphs[1].textContent = siteContent["main-content"]["about-content"];
