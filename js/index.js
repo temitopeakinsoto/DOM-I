@@ -85,3 +85,12 @@ mainContentParagraphs[3].textContent = siteContent["main-content"]["product-cont
 
 mainContentParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
 mainContentHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Updating the contact section of web page
+let contactSectionHeading = document.querySelector('.contact h4');
+contactSectionHeading.textContent = siteContent["contact"]["contact-h4"];
+
+let contactSectionParagraphs = document.querySelectorAll('.contact p');
+contactSectionParagraphs[0].textContent = siteContent["contact"]["address"];
+contactSectionParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactSectionParagraphs[2].textContent = siteContent["contact"]["email"];
