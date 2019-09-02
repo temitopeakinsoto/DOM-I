@@ -71,3 +71,7 @@ topContentParagraphs[0].textContent = siteContent["main-content"]["features-cont
 
 topContentHeadings[1].textContent  = siteContent["main-content"]["about-h4"] ;
 topContentParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+
+// select and update src attribute of middle image
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
