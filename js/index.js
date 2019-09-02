@@ -63,15 +63,25 @@ let ctaImage = document.querySelector('.cta img');
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 
 // Updating the Main Content
-let topContentHeadings = document.querySelectorAll('.text-content h4');
-let topContentParagraphs = document.querySelectorAll('.text-content p');
+let mainContentHeadings = document.querySelectorAll('.text-content h4');
+let mainContentParagraphs = document.querySelectorAll('.text-content p');
 
-topContentHeadings[0].textContent  = siteContent["main-content"]["features-h4"] ;
-topContentParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+mainContentHeadings[0].textContent  = siteContent["main-content"]["features-h4"] ;
+mainContentParagraphs[0].textContent = siteContent["main-content"]["features-content"];
 
-topContentHeadings[1].textContent  = siteContent["main-content"]["about-h4"] ;
-topContentParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+mainContentHeadings[1].textContent  = siteContent["main-content"]["about-h4"] ;
+mainContentParagraphs[1].textContent = siteContent["main-content"]["about-content"];
 
 // select and update src attribute of middle image
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//select and update bottom content.
+mainContentHeadings[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+
+mainContentHeadings[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+
+mainContentParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+mainContentHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
