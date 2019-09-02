@@ -49,3 +49,15 @@ navigationItems[2].textContent = siteContent["nav"]["nav-item-3"];
 navigationItems[3].textContent = siteContent["nav"]["nav-item-4"];
 navigationItems[4].textContent = siteContent["nav"]["nav-item-5"];
 navigationItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// Updating the cta-section
+let ctaHeading = document.querySelector('.cta-text h1');
+ctaHeading.innerText = siteContent["cta"]["h1"];
+
+// Updating the call-to-action "Get Started" Button
+let buttonText = document.querySelector('.cta button');
+buttonText.textContent = siteContent["cta"]["button"];
+
+// Call to action image
+let ctaImage = document.querySelector('.cta img');
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
