@@ -98,3 +98,16 @@ contactSectionParagraphs[2].textContent = siteContent["contact"]["email"];
 //Updating the footer section
 let footerParagraph = document.querySelector('footer p');
 footerParagraph.textContent = siteContent["footer"]["copyright"];
+
+// Using the appendChild() and prepend() methods to add nav links
+let prependedNavItem = document.createElement('a');
+prependedNavItem.textContent = 'home';
+prependedNavItem.setAttribute('href', '#');
+
+let appendedNavItem = document.createElement('a');
+appendedNavItem.textContent = 'blog';
+appendedNavItem.setAttribute('href', '#');
+
+let navBar = document.getElementsByTagName('nav');
+navBar[0].appendChild(appendedNavItem);
+navBar[0].prepend(prependedNavItem);
