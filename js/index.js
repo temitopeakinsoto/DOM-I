@@ -52,7 +52,8 @@ navigationItems[5].textContent = siteContent["nav"]["nav-item-6"];
 
 // Updating the cta-section
 let ctaHeading = document.querySelector('.cta-text h1');
-ctaHeading.innerText = siteContent["cta"]["h1"];
+let heading =siteContent["cta"]["h1"];
+ctaHeading.innerHTML = heading.split(' ').join('<br>');
 
 // Updating the call-to-action "Get Started" Button
 let buttonText = document.querySelector('.cta button');
