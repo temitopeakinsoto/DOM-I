@@ -100,6 +100,10 @@ contactSectionParagraphs[2].textContent = siteContent["contact"]["email"];
 let footerParagraph = document.querySelector('footer p');
 footerParagraph.textContent = siteContent["footer"]["copyright"];
 
+// change color to green
+navigationItemsArray = Array.from(navigationItems);
+navigationItemsArray.forEach(item => item.style.color = 'green');
+
 // Using the appendChild() and prepend() methods to add nav links
 let prependedNavItem = document.createElement('a');
 prependedNavItem.textContent = 'home';
@@ -112,3 +116,7 @@ appendedNavItem.setAttribute('href', '#');
 let navBar = document.getElementsByTagName('nav');
 navBar[0].appendChild(appendedNavItem);
 navBar[0].prepend(prependedNavItem);
+
+
+// Stretch starts here
+console.log(document.getElementsByName('a'));
