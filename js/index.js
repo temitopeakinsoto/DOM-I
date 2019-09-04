@@ -40,3 +40,83 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Updating the Navigation Items
+const navigationItems = document.getElementsByTagName('a');
+navigationItems[0].textContent = siteContent["nav"]["nav-item-1"];
+navigationItems[1].textContent = siteContent["nav"]["nav-item-2"];
+navigationItems[2].textContent = siteContent["nav"]["nav-item-3"];
+navigationItems[3].textContent = siteContent["nav"]["nav-item-4"];
+navigationItems[4].textContent = siteContent["nav"]["nav-item-5"];
+navigationItems[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// Updating the cta-section
+let ctaHeading = document.querySelector('.cta-text h1');
+let heading =siteContent["cta"]["h1"];
+ctaHeading.innerHTML = heading.split(' ').join('<br>');
+
+// Updating the call-to-action "Get Started" Button
+let buttonText = document.querySelector('.cta button');
+buttonText.textContent = siteContent["cta"]["button"];
+
+// Call to action image
+let ctaImage = document.querySelector('.cta img');
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Updating the Main Content
+let mainContentHeadings = document.querySelectorAll('.text-content h4');
+let mainContentParagraphs = document.querySelectorAll('.text-content p');
+
+mainContentHeadings[0].textContent  = siteContent["main-content"]["features-h4"] ;
+mainContentParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+
+mainContentHeadings[1].textContent  = siteContent["main-content"]["about-h4"] ;
+mainContentParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+
+// select and update src attribute of middle image
+let middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//select and update bottom content.
+mainContentHeadings[2].textContent = siteContent["main-content"]["services-h4"];
+mainContentParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+
+mainContentHeadings[3].textContent = siteContent["main-content"]["product-h4"];
+mainContentParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+
+mainContentParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+mainContentHeadings[4].textContent = siteContent["main-content"]["vision-h4"];
+
+// Updating the contact section of web page
+let contactSectionHeading = document.querySelector('.contact h4');
+contactSectionHeading.textContent = siteContent["contact"]["contact-h4"];
+
+let contactSectionParagraphs = document.querySelectorAll('.contact p');
+contactSectionParagraphs[0].textContent = siteContent["contact"]["address"];
+contactSectionParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactSectionParagraphs[2].textContent = siteContent["contact"]["email"];
+
+//Updating the footer section
+let footerParagraph = document.querySelector('footer p');
+footerParagraph.textContent = siteContent["footer"]["copyright"];
+
+// change color to green
+navigationItemsArray = Array.from(navigationItems);
+navigationItemsArray.forEach(item => item.style.color = 'green');
+
+// Using the appendChild() and prepend() methods to add nav links
+let prependedNavItem = document.createElement('a');
+prependedNavItem.textContent = 'home';
+prependedNavItem.setAttribute('href', '#');
+
+let appendedNavItem = document.createElement('a');
+appendedNavItem.textContent = 'blog';
+appendedNavItem.setAttribute('href', '#');
+
+let navBar = document.getElementsByTagName('nav');
+navBar[0].appendChild(appendedNavItem);
+navBar[0].prepend(prependedNavItem);
+
+
+// Stretch starts here
+console.log(document.getElementsByName('a'));
